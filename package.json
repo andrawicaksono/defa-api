@@ -1,0 +1,19 @@
+{
+  "name": "crud-firebase-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andra Wicaksono",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "firebase": "^9.2.0",
+    "firebase-admin": "^10.0.0",
+    "path": "^0.12.7"
+  }
+}
