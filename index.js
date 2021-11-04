@@ -31,7 +31,7 @@ function getTS(ts) {
 }
 
 app.post('/', async (req, res) => {
-    let ts = Date.now();
+    let ts = Date.now() + 3600000*7;
     let dateNow = getTS(ts);
     let docRef = db.collection('sensors').doc(dateNow);
     await docRef.set({
