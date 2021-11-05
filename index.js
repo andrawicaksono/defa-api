@@ -30,6 +30,16 @@ function getTS(ts) {
     return dateNow;
 }
 
+app.get('/get', async (req, res) => {
+    let usr=[]
+     const users = await db.collection('sensors').get()
+    if (users.docs.length > 0) {
+      for (const user of users.docs) {
+       usr.push(user.data())
+    }}
+    res.json(usr)
+  })
+
 app.post('/', async (req, res) => {
     let ts = Date.now() + 3600000*7;
     let dateNow = getTS(ts);
