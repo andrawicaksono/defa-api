@@ -30,7 +30,7 @@ function getTS(ts) {
     return dateNow;
 }
 
-app.get('/get', async (req, res) => {
+app.get('/', async (req, res) => {
     let usr=[]
      const users = await db.collection('sensors').get()
     if (users.docs.length > 0) {
